@@ -18,6 +18,7 @@ int main(int argc, char* argv[]){
     } else {
         printf("%d is NOT a factor of %d\n", num1, num2);
     }
-    
+    //https://github.com/scyl/COMP1917-16s2
+    //scyl@cse.unsw.edu.au
     return 0;
 }
