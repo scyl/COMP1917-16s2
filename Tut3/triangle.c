@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
     // Obtain input
     printf("Enter number: ");
     scanf("%d", &num);
-    // Print a row a num stars
+    
     col = 1;
     while(col <= num){
         printf("*");

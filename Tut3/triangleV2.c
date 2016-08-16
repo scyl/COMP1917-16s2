@@ -3,26 +3,27 @@
 int main(int argc, char* argv[]) {
     int num;
     int row, col;
-    int count = 0;
+    int countSpace = 0;
     // Obtain input
     printf("Enter number: ");
     scanf("%d", &num);
-    count = num;
     
+    countSpace = num -1;
     row = 0;
     while(row < num) {
         col = 0;
-        while(col <= num) {
-            if(col < count) {
-                printf("*");
-            } else {
+        while(col < num) {
+            if(col < countSpace) {
                 printf(" ");
+            } else {
+                printf("*");
             }
             col++;
+            
         } 
         printf("\n"); // Start a new line
         row++;
-        count--;
+        countSpace--;
     }
     
     return 0;
