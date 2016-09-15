@@ -25,6 +25,7 @@ int main(int argc, char* argv[]){
 int max_value(int n, int a[]) {
     int i = 0;
     int max = a[0];
+    
     while (i < n) {
         if (a[i] > max) {
             max = a[i];
@@ -38,6 +39,7 @@ int max_value(int n, int a[]) {
 int non_decreasing(int a[], int n) {
     int i = 0;
     int returnValue = 1;
+    
     while (i < n-1) {
         if (a[i] > a[i+1]) {
             returnValue = 0;
@@ -51,7 +53,8 @@ int non_decreasing(int a[], int n) {
 int findIndex(int x, int a[], int n){
     int i = 0;
     int returnValue = -1;
-    while (i < n && returnValue == -1) {
+    
+    while(i < n && returnValue == -1) {
         if (a[i] == x) {
             returnValue = i;
         }

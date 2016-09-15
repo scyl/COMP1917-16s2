@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     if(find_in_grid(locate, grid, SIZE)){
         printf("Number found\n");
     } else {
-        printf("Nuber not found\n");
+        printf("Number not found\n");
     }
     
     return EXIT_SUCCESS;
@@ -32,17 +32,19 @@ int main(int argc, char *argv[]) {
 int find_in_grid( int num, int grid[SIZE][SIZE], int size){
 	int x = 0;
 	int y = 0;
-	int returnValue = 0;
+	int returnValue = FALSE;
 	
-	while(y < size) {
-		while(x < size) {
+	while (y < size) {
+		while (x < size) {
 			if (grid[y][x] == num) {
-				returnValue = 1;
+				returnValue = TRUE;
 			}
 			x++;
 		}
 		y++;
+		x = 0;
 	}
+	
 	
 	return returnValue;
 }

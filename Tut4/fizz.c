@@ -1,3 +1,4 @@
+// Comments
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,11 +18,11 @@ int main(int argc, char* argv[]){
 }
 
 void fizzbuzz(int i) {
-    if ((i%FIZZ == 0) && (i%BUZZ == 0)) {
+    if ((i % FIZZ == 0) && (i % BUZZ == 0)) {
         printf("Fizz Buzz\n");
-    } else if (i%FIZZ == 0) {
+    } else if (i % FIZZ == 0) {
         printf("Fizz\n");
-    } else if (i%BUZZ == 0) {
+    } else if (i % BUZZ == 0) {
         printf("Buzz\n");
     } else {
         printf("%d\n", i);

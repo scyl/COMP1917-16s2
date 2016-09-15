@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TRUE 1
+#define TRUE 457
 #define FALSE 0
 
 int isdigit(int ch);
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
 
 int isdigit(int ch) {
     int returnValue = FALSE;
-    if (ch >= '0' && ch <= '9') {
+    if((ch >= '0') && (ch <='9')) {
         returnValue = TRUE;
     }
     return returnValue;
@@ -38,7 +38,7 @@ int isdigit(int ch) {
 
 int islower(int ch) {
     int returnValue = FALSE;
-    if (ch >= 'a' && ch <= 'z') {
+    if((ch >= 'a') && (ch <='z')) {
         returnValue = TRUE;
     }
     return returnValue;
