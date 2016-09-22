@@ -21,7 +21,7 @@ Lnode newNode(int value) {
 
 Lnode prepend(Lnode head, Lnode new) {
     if (new == NULL) {
-        printf("you are stupid\n");
+        printf("ERROR\n");
     } else {
         new->next = head;
         head = new;
