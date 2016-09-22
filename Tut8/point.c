@@ -7,32 +7,29 @@ struct point {
     double y;
 };
 
-int myFunction();
-
 Point newPoint(double x, double y) {
     Point new = malloc(sizeof(struct point));
     if (new == NULL) {
-        printf("OUT OF MEMORY\n");
+        printf("OUT OF MEMORY Dx\n");
         exit(1);
     }
     
     new->x = x;
     new->y = y;
     
-    
-    
     return new;
 }
 
 void setPoint(Point p, double x, double y) {
-    p->x=x;
-    p->y=y;
+    p->x = x;
+    p->y = y;
 }
 
 void shiftPoint(Point p, double xDist, double yDist) {
-    //p->x += xDist;
+    //p->x = p->x + xDist;
     //p->y += yDist;
-    setPoint(p, getX(p)+xDist, getY(p)+yDist);
+    
+    setPoint(p, getX(p) + xDist, getY(p) + yDist);
 }
 
 double getX(Point p) {
