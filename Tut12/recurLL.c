@@ -21,24 +21,48 @@ void printList(List l);
 void deleteNode(List l, int val);
 
 int length(List l);
+int lengthNode(Lnode node);
 int search(List l, int val);
-void printReverse(List l);
+int searchNode(Lnode node, int val);
 
 int main(int argc, char* argv[]) {
     List list1 = newList();
+    append(list1, 1);
+    append(list1, 211);
+    append(list1, 3);
+    append(list1, 4);
+    
+    printf("leng: %d\n", length(list1));
+    printf("search: %d\n", search(list1, 3));
     
     return EXIT_SUCCESS;
 }
 
 int length(List l){
-    
+    return lengthNode(l->head);
+}
+int lengthNode(Lnode node) {
+    int len = 0;
+    if (node != NULL) {
+        len = 1+lengthNode(node->next);
+    }
+    return len;
 }
 int search(List l, int val){
-    
+    return searchNode(l->head, val);
 }
-void printReverse(List l){
-    
+int searchNode(Lnode node, int val) {
+    int found = 0;
+    if (node != NULL) {
+        if (val == node->val) {
+            found = 1;
+        } else {
+            found = searchNode(node->next, val);
+        }
+    }
+    return found;
 }
+
 
 
 
