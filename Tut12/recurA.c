@@ -17,22 +17,20 @@ int main(int argc, char* argv[]) {
 }
 
 int sum(int a[], int start, int num) {
-    int returnValue = 0;
+    int sumNum = 0;
     if (num != 0) {
-        returnValue = a[start] + sum(a, start+1, num-1);
+        sumNum = a[start] + sum(a, start+1, num-1);
     }
-    
-    return returnValue;
+    return sumNum;
 }
 
 int max(int a[], int start, int num) {
-    int returnValue = a[start];
+    int maxNum = a[start];
     if (num != 1) {
-        int temp = max(a, start+1, num-1);
-        if (a[start] < temp) {
-            returnValue = temp;
+        int restMax = max(a, start+1, num-1);
+        if (maxNum < restMax) {
+            maxNum = restMax;
         }
     }
-    
-    return returnValue;
+    return maxNum;
 }

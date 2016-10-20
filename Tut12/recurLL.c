@@ -32,29 +32,32 @@ int main(int argc, char* argv[]) {
     append(list1, 3);
     append(list1, 4);
     
-    printf("leng: %d\n", length(list1));
-    printf("search: %d\n", search(list1, 3));
+    printf("length: %d\n", length(list1));
+    printf("search: %d\n", search(list1, 456));
     
     return EXIT_SUCCESS;
 }
 
-int length(List l){
-    return lengthNode(l->head);
+int length(List l) {
+   return lengthNode(l->head);
 }
+
 int lengthNode(Lnode node) {
     int len = 0;
     if (node != NULL) {
-        len = 1+lengthNode(node->next);
+        len = 1 + lengthNode(node->next);
     }
     return len;
 }
-int search(List l, int val){
+
+int search(List l, int val) {
     return searchNode(l->head, val);
 }
+
 int searchNode(Lnode node, int val) {
     int found = 0;
     if (node != NULL) {
-        if (val == node->val) {
+        if (node->val == val) {
             found = 1;
         } else {
             found = searchNode(node->next, val);
@@ -62,13 +65,6 @@ int searchNode(Lnode node, int val) {
     }
     return found;
 }
-
-
-
-
-
-
-
 
 
 List newList(void) {
